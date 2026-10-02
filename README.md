@@ -18,9 +18,9 @@ It is calibrated against 132 cloud-screened Sentinel-2 scenes of a 7.2-ha durian
 
 | Quantity | Value |
 |---|---|
-| Out-of-year R², dual-timescale chain (M3) | 0.42 |
-| Out-of-year R², annual-crop chain (B1) | 0.20 |
-| Out-of-year R², harmonic baseline (B0) | 0.53 |
+| Out-of-year R-Squared, dual-timescale chain (M3) | 0.42 |
+| Out-of-year R-Squared, annual-crop chain (B1) | 0.20 |
+| Out-of-year R-Sqquared, harmonic baseline (B0) | 0.53 |
 | Leaf turnover time 1/β0 | 50.9 d (folds 33–56 d) |
 | 95% profile-likelihood interval for the turnover time (correlated errors) | 14–81 d |
 
