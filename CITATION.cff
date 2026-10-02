@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article and this repository."
+title: "Code and data for: Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory"
+authors:
+  - family-names: Thongnim
+    given-names: Pattharaporn
+    orcid: "https://orcid.org/0000-0001-8904-3979"
+    affiliation: "Department of Mathematics, Faculty of Science, Burapha University, Thailand"
+license: MIT
+version: 1.0.0
+date-released: 2026-10-02
+keywords:
+  - light-use efficiency
+  - canopy memory
+  - Sentinel-2
+  - ERA5-Land
+  - profile likelihood
+  - durian
