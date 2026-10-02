@@ -58,7 +58,7 @@ run_all.sh      reproduces every result and figure
 ## Quick start
 
 ```bash
-git clone https://github.com/<user>/dual-timescale-lue.git
+git clone https://github.com/Pattharaporn-Aon/dual-timescale-lue.git
 cd dual-timescale-lue
 pip install -r requirements.txt
 ./run_all.sh            # about 1–2 h on a laptop; all scripts are run from the repository root
