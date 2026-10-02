@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Study orchard</name>
-<Style id="s"><LineStyle><color>ff00ffff</color><width>3</width></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-<Placemark><name>Study orchard</name><styleUrl>#s</styleUrl><Polygon><outerBoundaryIs><LinearRing><coordinates>102.2123655,12.6494732,0 102.2128604,12.6492678,0 102.2132364,12.6497048,0 102.213768,12.6506003,0 102.2143889,12.6519322,0 102.2127727,12.652682,0 102.212306,12.6523418,0 102.2114791,12.6507442,0 102.2116678,12.6503253,0 102.2118234,12.6494747,0 102.2123655,12.6494732,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
-</Document></kml>
