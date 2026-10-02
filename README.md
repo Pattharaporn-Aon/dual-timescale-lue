@@ -2,7 +2,7 @@
 
 Code and data for the article
 
-> Thongnim, P. *Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory.* (under review)
+> Thongnim, P. *Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory.* 
 
 The model converts daily weather into the greenness (NDVI) of an evergreen orchard observed by Sentinel-2:
 
