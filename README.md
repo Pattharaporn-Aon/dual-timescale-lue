@@ -4,7 +4,7 @@
 
 Code and data for the article
 
-> Thongnim, P. *Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory.* 
+> Thongnim, P., & Trithaveesak, O. *Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory.* 
 
 The model converts daily weather into the greenness (NDVI) of an evergreen orchard observed by Sentinel-2:
 
@@ -112,7 +112,7 @@ See `data/README.md` for licences and attribution.
 
 Please cite the article and the archived code and data:
 
-> Thongnim, P., & Trithaveesak, O. (2026). *Code and data for: Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory*. Zenodo. https://doi.org/10.5281/zenodo.23112752
+> Thongnim, P. (2026). *Code and data for: Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory*. Zenodo. https://doi.org/10.5281/zenodo.23112752
 
 GitHub's "Cite this repository" button (from `CITATION.cff`) gives the same reference in APA and BibTeX.
 
