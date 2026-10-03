@@ -13,8 +13,9 @@ python src/fit4.py
 echo "[3/8] Final calibration files for the figure scripts"
 python src/make_final.py
 
-echo "[4/8] Sensitivity to the fixed literature values"
+echo "[4/8] Sensitivity to the fixed values (including NDVI_full)"
 python src/sens.py
+python src/sens_ndvifull.py
 
 echo "[5/8] Correlated-error observation model, GLS and profile likelihood"
 python src/stats.py
@@ -25,6 +26,7 @@ echo "[6/8] Figures 2-6 and robustness of the memory scan"
 python src/figs.py
 python src/fig6.py
 python src/scan_robustness.py
+python src/ablation_slowpool.py
 
 echo "[7/8] Sensitivity to the temporal NDVI screening rule"
 for a in "none 30" "0.06 30" "0.08 30" "0.10 30" "0.08 20" "0.08 45"; do

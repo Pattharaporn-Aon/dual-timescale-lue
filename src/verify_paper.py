@@ -122,7 +122,20 @@ T3 = {"base": (0.575, 50.9, 0.109), "T_OPT=26": (0.586, 36.1, 0.225), "T_OPT=30"
       "ZR=600": (0.578, 52.4, 0.135), "ZR=1400": (0.573, 49.2, 0.098)}
 for k, (r2, tau, phi) in T3.items():
     v = SEN[k]; check(f"sens {k} R2", r2, v["R2"], 3); check(f"sens {k} tau", tau, v["tau"], 1); check(f"sens {k} phi", phi, v["phi"], 3)
-check("sensitivity cases", 13, len(SEN) - 1, 0)
+SN = J("sensitivity_ndvifull.json")
+for k, (r2, tau, phi) in {"NDVI_FULL=0.85": (0.569, 51.2, 0.094), "NDVI_FULL=0.95": (0.580, 49.4, 0.118)}.items():
+    v = SN[k]; check(f"sens {k} R2", r2, v["R2"], 3); check(f"sens {k} tau", tau, v["tau"], 1); check(f"sens {k} phi", phi, v["phi"], 3)
+check("NDVI_full: max change of turnover time below 2 d", 1, float(max(abs(SN[k]["tau"] - SN["NDVI_FULL=0.9"]["tau"]) for k in SN) < 2), 0)
+allt = [v["tau"] for k, v in SEN.items() if k != "base"] + [SN[k]["tau"] for k in ["NDVI_FULL=0.85", "NDVI_FULL=0.95"]]
+allr = [v["R2"] for k, v in SEN.items() if k != "base"] + [SN[k]["R2"] for k in ["NDVI_FULL=0.85", "NDVI_FULL=0.95"]]
+check("sensitivity cases (13 + NDVI_full 2)", 15, len(allt), 0)
+check("sensitivity tau min (all 15)", 36.1, min(allt), 1); check("sensitivity tau max (all 15)", 56.1, max(allt), 1)
+check("sensitivity R2 min (all 15)", 0.55, min(allr), 2); check("sensitivity R2 max (all 15)", 0.59, max(allr), 2)
+AB = J("ablation_slowpool.json")
+check("no slow pool (M3c): out-of-year RMSE", 0.146, AB["cv"]["RMSE"], 3)
+check("no slow pool: RMSE ratio to M3 (doubled)", 2.0, AB["cv"]["RMSE"] / R4["cv"]["M3"]["RMSE"], 0)
+check("no slow pool: in-sample R2", 0.38, AB["insample"]["R2"], 2)
+check("no slow pool: turnover time (d)", 24, AB["tau_full"], 0)
 
 # ---------------- discrepancy ----------------
 md = SUM["monthly_discrepancy"]
