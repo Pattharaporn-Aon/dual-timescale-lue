@@ -1,0 +1,23 @@
+{
+  "title": "Code and data for: Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory",
+  "upload_type": "software",
+  "description": "<p>Code and data accompanying the article &quot;Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory&quot;.</p><p>Contents</p><ul><li>Dual-timescale light-use-efficiency model (fast leaf pool, slow crown-cover pool)</li><li>ERA5/ERA5-Land weather, Sentinel-2 NDVI and SoilGrids data for the study orchard (2020&ndash;2026)</li><li>Leave-one-year-out comparison, slow-pool ablation, sensitivity analyses, correlated-error observation model and profile likelihood</li><li>run_all.sh reproduces every result and figure; src/verify_paper.py checks all 194 numbers reported in the article</li></ul>",
+  "creators": [
+    {
+      "name": "Thongnim, Pattharaporn",
+      "affiliation": "Department of Mathematics, Faculty of Science, Burapha University, Thailand",
+      "orcid": "0000-0001-8904-3979"
+    }
+  ],
+  "license": "mit-license",
+  "access_right": "open",
+  "keywords": [
+    "light-use efficiency",
+    "canopy memory",
+    "Sentinel-2",
+    "ERA5-Land",
+    "profile likelihood",
+    "durian"
+  ],
+  "notes": "If you use this code or data, please cite the article and this repository."
+}
