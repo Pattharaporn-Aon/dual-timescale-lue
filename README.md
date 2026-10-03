@@ -1,5 +1,7 @@
 # Dual-timescale light-use-efficiency model of perennial canopy memory
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23112752.svg)](https://doi.org/10.5281/zenodo.23112752)
+
 Code and data for the article
 
 > Thongnim, P. *Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory.* 
@@ -43,6 +45,8 @@ src/
   fit4lib.py      shared functions for fit4.py and sens_filter.py
   make_final.py   final calibration files for the figure scripts
   sens.py         sensitivity to the fixed literature values
+  sens_ndvifull.py  sensitivity to the assumed closed-canopy NDVI
+  ablation_slowpool.py  chain without crown expansion (M3c)
   stats.py, stats2.py, stats3.py   correlated-error model, feasible GLS, profile likelihood
   sens_filter.py  sensitivity to the temporal NDVI screening rule
   scan_robustness.py  memory scan without estimated parameters
@@ -62,7 +66,7 @@ git clone https://github.com/Pattharaporn-Aon/dual-timescale-lue.git
 cd dual-timescale-lue
 pip install -r requirements.txt
 ./run_all.sh            # about 1–2 h on a laptop; all scripts are run from the repository root
-python src/verify_paper.py   # 179 checks of the article's numbers (also the last step of run_all.sh)
+python src/verify_paper.py   # 194 checks of the article's numbers (also the last step of run_all.sh)
 ```
 
 Python 3.10 or later is required. The analysis was run with Python 3.11, NumPy 2.4, pandas 3.0, SciPy 1.17, numba 0.67, matplotlib 3.10 and scikit-learn 1.8.
@@ -76,7 +80,8 @@ The notebook in `notebooks/` runs the same analysis in Google Colab. It download
 | Parameter estimates and fold ranges | `src/fit4.py` | `results/results4.json` |
 | Leave-one-year-out skill of the six models | `src/fit4.py` | `results/results4.json`, `results/cv_predictions4.csv` |
 | Structural comparison of B0, B1 and M3 | `src/fit4.py` | `results/results4.json` |
-| Sensitivity to fixed literature values | `src/sens.py` | `results/sensitivity.json` |
+| Sensitivity to fixed values | `src/sens.py`, `src/sens_ndvifull.py` | `results/sensitivity.json`, `results/sensitivity_ndvifull.json` |
+| Chain without crown expansion (M3c, r = 0) | `src/ablation_slowpool.py` | `results/ablation_slowpool.json` |
 | GLS estimates, profile-likelihood intervals, identifiability | `src/stats.py`, `src/stats2.py`, `src/stats3.py` | `results/stats_*.json` |
 | Sensitivity to the NDVI screening rule | `src/sens_filter.py` | `results/sens_filter_*.json` |
 | Stress scalars, NDVI predictions, latent states, canopy memory | `src/figs.py` | `figures/fig2_*.pdf` – `figures/fig5_*.pdf`, `results/summary.json` |
@@ -105,7 +110,11 @@ See `data/README.md` for licences and attribution.
 
 ## Citation
 
-Please cite the article and this repository (`CITATION.cff`). A DOI for the archived release will be added here.
+Please cite the article and the archived code and data:
+
+> Thongnim, P., & Trithaveesak, O. (2026). *Code and data for: Profile-likelihood inference for a satellite-constrained dual-timescale light-use-efficiency model of perennial canopy memory*. Zenodo. https://doi.org/10.5281/zenodo.23112752
+
+GitHub's "Cite this repository" button (from `CITATION.cff`) gives the same reference in APA and BibTeX.
 
 ## Licence
 

@@ -6,9 +6,14 @@ authors:
     given-names: Pattharaporn
     orcid: "https://orcid.org/0000-0001-8904-3979"
     affiliation: "Department of Mathematics, Faculty of Science, Burapha University, Thailand"
+  - family-names: Trithaveesak
+    given-names: Opas
+    affiliation: "National Electronics and Computer Technology Center (NECTEC), Thailand"
 license: MIT
-version: 1.0.0
-date-released: 2026-10-02
+repository-code: "https://github.com/Pattharaporn-Aon/dual-timescale-lue"
+version: 1.1.0
+doi: 10.5281/zenodo.23112752
+date-released: 2026-10-03
 keywords:
   - light-use efficiency
   - canopy memory
